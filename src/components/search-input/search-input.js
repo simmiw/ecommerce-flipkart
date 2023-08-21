@@ -10,7 +10,9 @@ const SearchInput = () => {
         type="text"
         placeholder="Search for products, brand and more"
       />
-      <SearchIcon className="search-icon" />
+      <button className="search-icon">
+        <SearchIcon />
+      </button>
     </Styled>
   );
 };

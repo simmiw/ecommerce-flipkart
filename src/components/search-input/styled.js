@@ -1,22 +1,33 @@
 import styled from "styled-components";
 
 const Styled = styled.div`
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
   background-color: #fff;
-  position: relative;
+  margin-left: 12px;
 
   .search-input {
     height: 36px;
     outline: none;
     border: 0;
     padding: 0 16px;
+    width: 300px;
   }
 
   .search-icon {
-    width: 20px;
-    height: 20px;
-    color: #2874f0;
-    z-index: 1;
+    height: 36px;
+    width: 44px;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    padding: 4px 12px 0 8px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      color: #2874f0;
+    }
   }
 `;
 

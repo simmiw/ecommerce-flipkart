@@ -17,6 +17,48 @@ const StyledHeader = styled.div`
     img {
       width: 100px;
     }
+
+    .login-container {
+      display: flex;
+      align-items: center;
+      margin: 0 20px;
+
+      .login-button {
+        cursor: pointer;
+        background: transparent;
+        color: #fff;
+        outline: none;
+        border: 0;
+      }
+
+      svg {
+        width: 6px;
+        height: 8px;
+        fill: #fff;
+      }
+    }
+
+    .become-a-seller {
+      color: #fff;
+    }
+    .more-button {
+      display: flex;
+      align-items: center;
+      margin: 0 20px;
+
+      button {
+        cursor: pointer;
+        background: transparent;
+        color: #fff;
+        outline: none;
+        border: 0;
+      }
+      svg {
+        width: 6px;
+        height: 8px;
+        fill: #fff;
+      }
+    }
   }
 `;
 
