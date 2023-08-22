@@ -13,6 +13,7 @@ const StyledHeader = styled.div`
     display: flex;
     align-items: center;
     flex: 1;
+    width: 1250px;
 
     img {
       width: 100px;
@@ -22,19 +23,16 @@ const StyledHeader = styled.div`
       display: flex;
       align-items: center;
       margin: 0 20px;
+      background: white;
 
       .login-button {
+        height: 30px;
         cursor: pointer;
-        background: transparent;
-        color: #fff;
+        background: white;
+        color: #2874f0;
         outline: none;
+        padding: 0 30px;
         border: 0;
-      }
-
-      svg {
-        width: 6px;
-        height: 8px;
-        fill: #fff;
       }
     }
 
@@ -57,6 +55,26 @@ const StyledHeader = styled.div`
         width: 6px;
         height: 8px;
         fill: #fff;
+      }
+    }
+
+    .shopping-cart-container {
+      display: flex;
+      align-items: center;
+      margin: 0 20px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .cart {
+        padding: 0 0 0 8px;
+        cursor: pointer;
+        background: transparent;
+        color: #fff;
+        outline: none;
+        border: 0;
       }
     }
   }

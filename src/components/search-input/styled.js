@@ -5,13 +5,15 @@ const Styled = styled.div`
   justify-content: space-between;
   background-color: #fff;
   margin-left: 12px;
+  min-width: 300px;
+  width: calc(100% - 540px);
 
   .search-input {
     height: 36px;
     outline: none;
     border: 0;
     padding: 0 16px;
-    width: 300px;
+    width: 100%;
   }
 
   .search-icon {
