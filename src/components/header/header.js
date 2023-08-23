@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import StyledHeader from "./styled";
 import flipkartPlusLogo from "../../logos/flipkart-plus.png";
 import SearchInput from "../search-input/search-input";
@@ -8,6 +8,14 @@ import Dropdown from "../dropdown/dropdown";
 import { loginOptions } from "./dropdown-options";
 
 const Header = () => {
+  const [isHover, setIsHover] = useState(false);
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHover(false);
+  };
   return (
     <>
       <StyledHeader>
@@ -16,8 +24,20 @@ const Header = () => {
           <img src={flipkartPlusLogo} alt="flipkartPluslogo" />
           <SearchInput />
           <div className="login-container">
-            <button className="login-button">LogIn</button>
-            <Dropdown options={loginOptions} />
+            <button
+              className="login-button"
+              onMouseOver={handleMouseEnter}
+              onMouseOut={handleMouseOut}
+            >
+              LogIn
+              {isHover ? (
+                <div className="first-dropdown-option">
+                  <div className="new-customer">New Customer?</div>
+                  <div>Sign up</div>
+                </div>
+              ) : null}
+              {isHover ? <Dropdown options={loginOptions} /> : null}
+            </button>
           </div>
           <span className="become-a-seller">Become a Seller</span>
           <div className="more-button">

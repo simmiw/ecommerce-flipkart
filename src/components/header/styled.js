@@ -26,6 +26,7 @@ const StyledHeader = styled.div`
       background: white;
 
       .login-button {
+        display: inline-block;
         height: 30px;
         cursor: pointer;
         background: white;
@@ -33,6 +34,18 @@ const StyledHeader = styled.div`
         outline: none;
         padding: 0 30px;
         border: 0;
+
+        .first-dropdown-option {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+          text-alignment: center;
+          margin-top: 30px;
+
+          .new-customer {
+            color: #000;
+          }
+        }
       }
     }
 
