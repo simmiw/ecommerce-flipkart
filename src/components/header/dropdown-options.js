@@ -37,4 +37,11 @@ const loginOptions = [
   },
 ];
 
-export { loginOptions };
+const moreOptions = [
+  {
+    name: "FALANA",
+    icons: GiftCardsIcon,
+  },
+];
+
+export { loginOptions, moreOptions };

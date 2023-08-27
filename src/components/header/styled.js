@@ -9,6 +9,13 @@ const StyledHeader = styled.div`
     width: 124px;
   }
 
+  .search-input-container {
+    margin-left: 12px;
+    min-width: 300px;
+    width: calc(100% - 540px);
+    padding-right: 20px;
+  }
+
   .main-container {
     display: flex;
     align-items: center;
@@ -21,9 +28,8 @@ const StyledHeader = styled.div`
 
     .login-container {
       display: flex;
-      align-items: center;
+      justify-content: center;
       margin: 0 20px;
-      background: white;
 
       .login-button {
         display: inline-block;
@@ -34,24 +40,14 @@ const StyledHeader = styled.div`
         outline: none;
         padding: 0 30px;
         border: 0;
-
-        .first-dropdown-option {
-          display: flex;
-          justify-content: space-between;
-          padding: 10px;
-          text-alignment: center;
-          margin-top: 30px;
-
-          .new-customer {
-            color: #000;
-          }
-        }
       }
     }
 
     .become-a-seller {
       color: #fff;
+      margin: 0 20px;
     }
+
     .more-button {
       display: flex;
       align-items: center;

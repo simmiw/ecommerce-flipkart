@@ -4,9 +4,6 @@ const Styled = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  margin-left: 12px;
-  min-width: 300px;
-  width: calc(100% - 540px);
 
   .search-input {
     height: 36px;

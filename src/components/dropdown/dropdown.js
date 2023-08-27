@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import StyledDropdown from "./styled";
 
-const Dropdown = ({ options }) => {
+const Dropdown = ({ options, targetElement }) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
-    <>
-      <StyledDropdown>
-        {options.map((option) => {
-          const Icon = option.icon;
-          return (
-            <ul className="dropdown-list-container">
-              <Icon />
-              <li className="dropdown-list">{option.name}</li>
-            </ul>
-          );
-        })}
-      </StyledDropdown>
-    </>
+    <StyledDropdown
+      onMouseOver={() => {
+        setIsDropdownOpen(true);
+      }}
+      onMouseOut={() => {
+        setIsDropdownOpen(false);
+      }}
+    >
+      {targetElement}
+      {isDropdownOpen ? (
+        <ul className="dropdown-list-container">
+          {options.map((option) => {
+            const Icon = option.icon;
+            return (
+              <li className="dropdown-list">
+                <Icon />
+                {option.name}
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
+    </StyledDropdown>
   );
 };
 

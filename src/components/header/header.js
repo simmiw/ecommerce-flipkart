@@ -5,48 +5,32 @@ import SearchInput from "../search-input/search-input";
 import { ReactComponent as BottomArrow } from "../../logos/bottom-arrow-svgrepo-com.svg";
 import { ReactComponent as ShoppingCartIcon } from "../../logos/shopping-cart-outline-svgrepo-com.svg";
 import Dropdown from "../dropdown/dropdown";
-import { loginOptions } from "./dropdown-options";
+import { loginOptions, moreOptions } from "./dropdown-options";
 
 const Header = () => {
-  const [isHover, setIsHover] = useState(false);
-  const handleMouseEnter = () => {
-    setIsHover(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHover(false);
-  };
   return (
     <>
       <StyledHeader>
         <div className="empty-box"></div>
         <div className="main-container">
-          <img src={flipkartPlusLogo} alt="flipkartPluslogo" />
-          <SearchInput />
+          <img src={flipkartPlusLogo} alt="Flipkart Plus" />
+          <div className="search-input-container">
+            <SearchInput />
+          </div>
           <div className="login-container">
-            <button
-              className="login-button"
-              onMouseOver={handleMouseEnter}
-              onMouseOut={handleMouseOut}
-            >
-              LogIn
-              {isHover ? (
-                <div className="first-dropdown-option">
-                  <div className="new-customer">New Customer?</div>
-                  <div>Sign up</div>
-                </div>
-              ) : null}
-              {isHover ? <Dropdown options={loginOptions} /> : null}
-            </button>
+            <Dropdown
+              options={loginOptions}
+              targetElement={<button className="login-button">Login</button>}
+            />
           </div>
           <span className="become-a-seller">Become a Seller</span>
-          <div className="more-button">
+          {/* <Dropdown options={moreOptions}>
             <button>More</button>
             <BottomArrow />
-          </div>
+          </Dropdown> */}
+
           <div className="shopping-cart-container">
             <ShoppingCartIcon />
-
             <div className="cart">Cart</div>
           </div>
         </div>

@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 const StyledDropdown = styled.div`
-  background-color: #fff;
-  width: 200px;
-  margin-top: 40px;
+  position: relative;
 
   .dropdown-list-container {
+    position: absolute;
+    top: 100%;
+    padding: 0;
+    margin: 0;
     list-style-type: none;
-    display: flex;
     border-top: 1px solid #f0f0f0;
-    align-items: start;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+    width: 240px;
 
     svg {
       margin-top: 14px;
