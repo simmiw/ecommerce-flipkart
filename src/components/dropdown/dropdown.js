@@ -19,7 +19,7 @@ const Dropdown = ({ options, targetElement }) => {
           {options.map((option) => {
             const Icon = option.icon;
             return (
-              <li className="dropdown-list">
+              <li key={option.name} className="dropdown-list">
                 <Icon />
                 {option.name}
               </li>
