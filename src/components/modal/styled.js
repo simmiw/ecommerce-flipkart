@@ -12,29 +12,32 @@ const Styled = styled.div`
   justify-content: center;
 
   .modal-container {
+    position: relative;
     background: #fff;
-    overflow: auto;
     display: flex;
     max-height: 90%;
-    min-width: 650px;
-    max-width: 750px;
+    min-width: 400px;
+    max-width: 90%;
     height: 528px;
     border-radius: 2px;
   }
 
-  .login-info {
-    background-color: rgb(40, 116, 240);
-    display: inline-block;
-    padding: 40px 33px;
-    span {
-      color: #fff;
-    }
-    p {
-      color: #fff;
-    }
+  .modal-content {
+    max-width: 100%;
+    overflow: auto;
   }
-  .login-form {
-    padding: 56px 35px 16px;
+
+  .close-modal {
+    position: absolute;
+    top: 0;
+    right: -32px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1;
   }
 `;
 

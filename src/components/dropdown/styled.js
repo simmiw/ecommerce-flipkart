@@ -7,6 +7,7 @@ const StyledDropdown = styled.div`
     position: absolute;
     top: 100%;
     padding: 0;
+    background-color: #fff;
     margin: 0;
     list-style-type: none;
     border-top: 1px solid #f0f0f0;
@@ -18,19 +19,11 @@ const StyledDropdown = styled.div`
       align-items: start;
     }
 
-    .dropdown-list {
-      margin-top: 14px;
-      margin-left: 16px;
-    }
-    .modal-contaniner {
-      background: #fff;
-      overflow: auto;
-      display: flex;
-      max-width: 750px;
-      min-width: 650px;
-      height: 528px;
-      border-radius: 2px;
-      border: 2px solid rgb(40, 116, 240);
+    .dropdown-item {
+      height: 50px;
+      &:hover {
+        background-color: #fafafa;
+      }
     }
   }
 `;

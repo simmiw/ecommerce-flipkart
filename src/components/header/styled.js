@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const StyledHeader = styled.div`
+  display: flex;
   background-color: #2874f0;
   height: 56px;
-  display: flex;
 
   .empty-box {
     width: 124px;

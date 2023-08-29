@@ -1,10 +1,15 @@
 import React from "react";
 import Styled from "./styled";
 
-const Modal = ({ children }) => {
+const Modal = ({ children, onCloseTrigger }) => {
   return (
     <Styled>
-      <div className="modal-container">{children}</div>
+      <div className="modal-container">
+        <div className="modal-content">{children}</div>
+        <button className="close-modal" onClick={onCloseTrigger}>
+          ✕
+        </button>
+      </div>
     </Styled>
   );
 };

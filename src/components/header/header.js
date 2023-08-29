@@ -7,13 +7,18 @@ import { ReactComponent as ShoppingCartIcon } from "../../logos/shopping-cart-ou
 import Dropdown from "../dropdown/dropdown";
 import { loginOptions, moreOptions } from "./dropdown-options";
 import Modal from "../modal/modal";
+import Login from "./login/login";
 
 const Header = () => {
-  const [isLoginModalOpen, setIsLoginModal] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   const onHandleClick = useCallback(() => {
-    setIsLoginModal(true);
-  }, [setIsLoginModal]);
+    setIsLoginModalOpen(true);
+  }, [setIsLoginModalOpen]);
+
+  const closeModal = () => {
+    setIsLoginModalOpen(false);
+  };
 
   return (
     <>
@@ -34,24 +39,8 @@ const Header = () => {
               }
             />
             {isLoginModalOpen ? (
-              <Modal>
-                <div className="login-info">
-                  <span>Login</span>
-                  <p>Get access to your Orders, Wishlist and Recommendations</p>
-                </div>
-                <div className="login-form">
-                  <input
-                    className="login-input"
-                    placeholder="Enter Email/Mobile Number"
-                  ></input>
-                  <div>
-                    By continuing, you agree to Flipkart's Terms of Use and
-                    Privacy Policy.
-                  </div>
-                  <button>Request OTP</button>
-
-                  <span>New to Flipkart? Create an account</span>
-                </div>
+              <Modal onCloseTrigger={closeModal}>
+                <Login />
               </Modal>
             ) : null}
           </div>
