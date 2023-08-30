@@ -93,10 +93,10 @@ const Styled = styled.div`
 
     .create-new-account {
       text-align: center;
-
       .create-account-link {
         color: #2874f0;
         font-weight: 500;
+        text-decoration: none;
       }
     }
   }

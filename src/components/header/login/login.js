@@ -21,7 +21,10 @@ const Login = () => {
           <button>Request OTP</button>
         </div>
         <div className="create-new-account">
-          <a className="create-account-link">
+          <a
+            className="create-account-link"
+            href="http://localhost:3000/account/login/signup"
+          >
             New to Flipkart? Create an account
           </a>
         </div>
